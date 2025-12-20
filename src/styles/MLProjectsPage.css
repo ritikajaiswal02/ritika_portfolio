@@ -1,0 +1,222 @@
+.ml-projects-page {
+  background: linear-gradient(135deg, var(--dark-purple), rgba(45, 27, 105, 0.5));
+  min-height: 100vh;
+  padding: 8rem 0 4rem 0;
+}
+
+.ml-page-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+}
+
+.ml-page-title .highlight {
+  background: linear-gradient(135deg, var(--cyan), var(--neon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ml-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-project-card {
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.ml-project-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.ml-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+.ml-project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 14, 39, 0) 0%, rgba(10, 14, 39, 0) 55%, rgba(10, 14, 39, 0.45) 75%, rgba(10, 14, 39, 0.7) 100%);
+  pointer-events: none;
+}
+
+.ml-project-body {
+  position: relative;
+  z-index: 2;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 0.75rem;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  background: linear-gradient(135deg, rgba(26, 26, 62, 0.92), rgba(45, 27, 105, 0.88));
+  backdrop-filter: blur(8px);
+  border-radius: 10px 10px 0 0;
+}
+
+.ml-project-card:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+.ml-project-card:hover .ml-project-image img {
+  transform: scale(1.05);
+}
+
+.ml-project-header {
+  margin-bottom: 1rem;
+}
+
+.ml-project-title {
+  font-size: 1.3rem;
+  color: var(--cyan);
+  margin: 0;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+
+.ml-project-card:hover .ml-project-title {
+  color: var(--neon);
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.ml-project-card:hover .ml-project-body {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ml-project-description {
+  color: var(--light-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.ml-project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.ml-tech-tag {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ml-tech-tag:hover {
+  background: var(--cyan);
+  color: var(--dark-purple);
+}
+
+.ml-project-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  padding-top: 0.75rem;
+}
+
+.ml-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--neon);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.ml-project-link:hover {
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  transform: translateX(3px);
+}
+
+.ml-arrow {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.ml-github-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--neon);
+  transition: all 0.3s ease-in-out;
+  padding: 0.5rem;
+}
+
+.ml-github-link:hover {
+  color: var(--cyan);
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+  transform: scale(1.15);
+}
+
+.ml-github-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .ml-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ml-page-title {
+    font-size: 2rem;
+  }
+
+  .ml-project-card {
+    padding: 1.5rem;
+  }
+
+  .ml-project-title {
+    font-size: 1.1rem;
+  }
+
+  .ml-project-links {
+    flex-wrap: wrap;
+  }
+}
