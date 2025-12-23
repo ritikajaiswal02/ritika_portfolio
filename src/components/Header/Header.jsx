@@ -31,6 +31,9 @@ const Header = () => {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
 
           <ul className={`nav-links ${isOpen ? 'active' : ''}`}>

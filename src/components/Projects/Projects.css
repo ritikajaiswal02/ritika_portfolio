@@ -194,15 +194,21 @@
 
 @media (max-width: 480px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 🔥 KEY FIX */
+    gap: 0.8rem;
+  }
+
+  .project-card {
+    width: 100%;
+    box-sizing: border-box; /* 🔥 ENSURES equal width */
   }
   .project-image{
     border-radius: 8px;
   }
-  .project-card{
+  /* .project-card{
     height:85px;
-    width: 100%;
-  }
+    width: 95%;
+  } */
   .project-content {
     padding: 0.4rem;
     height: 100%;
@@ -234,15 +240,18 @@
 ================================= */
 @media (min-width: 481px) and (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 🔥 KEY FIX */
+    gap: 0.8rem;
+  }
+
+  .project-card {
+    width: 100%;
+    box-sizing: border-box; /* 🔥 ENSURES equal width */
   }
   .project-image{
     border-radius: 8px;
   }
-  .project-card{
-    height:80px;
-    width: 95%;
-  }
+  
   .project-content {
     padding: 0.9rem;
     height: 100%;
@@ -260,5 +269,17 @@
     padding: 0.2rem 0.4rem;
     font-size: 0.8rem;
 }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 🔥 KEY FIX */
+    gap: 0.8rem;
+  }
+
+  .project-card {
+    width: 100%;
+    box-sizing: border-box; /* 🔥 ENSURES equal width */
+  }
 }
 

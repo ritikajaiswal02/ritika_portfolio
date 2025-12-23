@@ -18,10 +18,10 @@ const Achievements = () => {
     },
     {
       id: 3,
-      title: 'Smart India Hackathon (SIH) – Participant',
-      description: 'Developed an AI-based chatbot for a tour website, contributing to solution design, AI development, and collaborative problem-solving during the national-level hackathon',
+      title: 'FYND 24-Hour Hacktimus Hackathon – Finalist',
+      description: 'Selected as a FYND Hackathon Finalist from 42 shortlisted participants and delivered a working prototype within 24 hours',
       icon: '🥇',
-      link: 'https://www.linkedin.com/in/ritikajaiswal0115/overlay/1735812377949/single-media-viewer/?profileId=ACoAAETnuF4B3XwUXarnBOzAIlGqTzSe_RH8D8s',
+      link: 'https://www.linkedin.com/in/ritikajaiswal0115/overlay/1766473139269/single-media-viewer/?profileId=ACoAAETnuF4B3XwUXarnBOzAIlGqTzSe_RH8D8s',
     },
     {
       id: 4,
